@@ -5,7 +5,7 @@ image = face_recognition.load_image_file("image/2.jpg") # Chargez l'image
 
 loc = face_recognition.face_locations(image) # Détecter les visages
 print(loc)
-"""
+
 # Créer une nouvelle image
 image_pil = Image.fromarray(image)
 draw = ImageDraw.Draw(image_pil)
@@ -18,4 +18,3 @@ for tete in loc:
     #print(x1," ",x0," ",y0," ",y1)
 # Afficher la nouvelle image
 image_pil.show()
-"""
