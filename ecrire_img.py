@@ -1,5 +1,6 @@
 from PIL import Image, ImageFont, ImageDraw
 img = Image.open("image/1.jpg")
+
 ft=ImageFont.truetype("arial.ttf",150)
 text= "bonjour"
 img_draw = ImageDraw.Draw(img)

@@ -1,7 +1,10 @@
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont,ImageTk
 import face_recognition
 import numpy as np
-import matplotlib.pyplot as plt
+import tkinter as tk
+
+root = tk.Tk()
+root.title("recognition")
 
 # Chargez un exemple d'image et apprenez a la reconnaitre
 image_bieber = face_recognition.load_image_file("image/bieber.jpg")
@@ -55,5 +58,9 @@ for (haut, droite, bas, gauche), encodage_visage in zip(emp_visage_inconnu, enco
 
 # Afficher l'image resultante
 #plt.show(image_pil)
-image_pil.show()
-image_pil.save("im2.jpg") #- Enregistrer l'image
+#image_pil.show()
+photo = ImageTk.PhotoImage(image_pil)
+wondows = tk.Label(root, image=photo)
+wondows.place(x=0,y=0)
+root.mainloop()
+#image_pil.save("im2.jpg") #- Enregistrer l'image
