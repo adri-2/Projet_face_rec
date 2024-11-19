@@ -5,7 +5,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("recognition")
-
+root.geometry("1000x800")
 # Chargez un exemple d'image et apprenez a la reconnaitre
 image_bieber = face_recognition.load_image_file("image/bieber.jpg")
 encodage_visage_bieber = face_recognition.face_encodings(image_bieber)[0]
@@ -23,7 +23,7 @@ nom_visage_connu = [
 ]
 
 # Charger une image avec un visage inconnu
-image_inconnu = face_recognition.load_image_file("image/inconnu.jpg")
+image_inconnu = face_recognition.load_image_file("image/Bieber_0.jpg")
 
 # Trouver tous les visages et encodages de visage dans l'image inconnue
 emp_visage_inconnu = face_recognition.face_locations(image_inconnu)
